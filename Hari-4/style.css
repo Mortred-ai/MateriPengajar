@@ -1,0 +1,142 @@
+header{
+    background: sandybrown;
+    width: 100%;
+}
+
+nav{
+    background: #111921;
+}
+
+nav a{
+    color: #fff;
+}
+
+nav a.selected, nav a:hover{
+    color: #43acd4;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+li{
+    display: inline;
+    float: right;
+    padding: 3px 30px ;
+    
+}
+
+li:hover{
+    color: rgb(18, 214, 18);
+    transition-duration: 0.3s;
+    cursor: pointer;
+    
+}
+
+img{
+    margin-right: 3%;
+    background: orange;
+    /* float: left; */
+}   
+
+.box-txt{
+    width: 66%;
+    margin-left: auto;
+}
+
+.container{
+    background: lightgoldenrodyellow;
+    width: 100%;
+    display: inline-block;
+}
+
+/* COL (Grid) */
+
+.col12 {
+	width: 100%;
+}
+
+.col11 {
+	width: 81.7%;
+}
+
+.col10 {
+	width: 83.3%;
+}
+
+.col9 {
+	width: 75%;
+}
+
+.col8 {
+	width: 66.7%;
+}
+
+.col7 {
+	width: 58.3%;
+}
+
+.col6 {
+	width: 50%;
+}
+
+.col5 {
+	width: 41.7%;
+}
+
+.col4 {
+	width: 33.3%;
+}
+
+.col3 {
+	width: 25%;
+}
+
+.col2{
+	width: 16.7%
+}
+
+.col1 {
+	width: 8.3%;
+}
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12{
+	float: left;
+}
+
+/* Grid */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
+    /* background-color: #2196F3; */
+    padding: 5px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .item1 {
+    grid-column: 1 / 5;
+  }
+  
+  .item2 {
+    grid-column: 5 / 7;
+  }
+  
+  .item3 {
+    grid-column: 1 / 3;
+  }
+  
+  .item4 {
+    grid-column: 3 / 5;
+  }
+  
+  .item5 {
+    grid-column: 5 / 7;
+  }
