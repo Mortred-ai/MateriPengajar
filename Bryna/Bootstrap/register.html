@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
     <style>
@@ -16,8 +16,7 @@
 </head>
 
 <body>
-
-    <navbar class="fixed-top">
+ 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark  ">
             <div class="container-fluid ">
                 <a class="navbar-brand mx-md-auto d-flex" href="index.html"><img src="assets/logo2.png"></a>
@@ -53,17 +52,21 @@
                     </ul> 
                 </div>
             </div>
-        </nav>
-    </navbar> 
+        </nav> 
 
     <div class="container-fluid">
         <div class="container">
+            
             <div class="row ">
-                <div class="col-md-6 offset-3 bg-register-form p-4">
-                    <br><br><br><br><br><br><br>
-                    <h4 class="">Please Complete the form below</h4>
-                      <form action="" class="my-4">
-                        <div class="mb-3">
+               
+                <div class="col-md-6 offset-3 bg-register-form p-4 mt-5">
+
+                    <div class="alert alert-success alert-dismissible fade show" id="myAlert">
+                        formulir berhasil dikirim
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="CLose"></button>
+                    </div>
+                    <!-- <h4 class="">Please Complete the form below</h4> -->  
+                        <div class="my-3">
                           <label for="Nama Depan" class="form-label">Full Name</label>
                           <input type="text" class="form-control rounded-0">
                         </div>
@@ -79,35 +82,66 @@
                         </div>
 
                         <div class="mb-3">
-                          <label for="Nama Belakang" class="form-label">Password</label>
+                          <label for="Nama Belakang" class="form-label">Create Password</label>
                           <input type="text" class="form-control rounded-0">
                         </div>
-                        
-                        <div class="mb-3">
-                          <label for="Nama Belakang" class="form-label">Re-type Password</label>
-                          <input type="text" class="form-control rounded-0">
-                        </div>
-
-                        <div class="mb-3">
-                          <label for="Nama Belakang" class="form-label">Address</label>
-                          <input type="text" class="form-control rounded-0">
-                        </div>
-
+                         
                         <div class="my-3 form-check">
                             <input type="checkbox" class="form-check-input">
                             <label class="form-check-label">I accept the <span>Terms of Services and Privacy Policy</span></label>
                         </div>
 
-                        <button class="btn btn-outline-primary mb-3 "> Create Account</button>
+                        <button class="btn btn-outline-primary" id="btnKirim" onclick="simpanForm()" onclickkk="clickFunction()" > Create Account</button>
 
-                        <p>Have an account? <a href="">Login here</a></p>
-                        
-                      </form>
+                        <button class="btn btn-outline-primary" id="btnLoading" disabled>
+                            <div class="spinner-border text-primary spinner-border-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <span class="ms-3">Loading..</span>
+                        </button>
+                        <p>Have an account? <a href="">Login here</a></p> 
+ 
                 </div>
             </div>
         </div>
     </div>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        var myAlert = document.getElementById('myAlert');
+        
+        myAlert.style.display = 'none';
+
+        function clickFunction(){
+            myAlert.style.display = 'block';
+        } 
+
+        var btnKirim = document.getElementById('btnKirim');
+        var btnLoading = document.getElementById('btnLoading');
+
+        btnLoading.style.display = 'none';
+
+        function startProcess(){
+            btnKirim.style.display = 'none';
+            btnLoading.style.display = 'block';
+        }
+
+        function endProcess(){
+            btnLoading.style.display = 'none';
+            btnKirim.style.display = 'block';
+        }
+
+        function simpanForm(){
+            startProcess();
+
+            // setTimeout(endProcess, 3000);
+
+            setTimeout(function(){
+                    endProcess(); clickFunction()
+                }, 3000);
+        }
+    </script>
 </body>
 </html>
