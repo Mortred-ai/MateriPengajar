@@ -53,7 +53,7 @@
 <div class="container-fluid">
     <div class="container"> 
         <div class="row "> 
-            <div class="col-md-6 offset-4 bg-register-form p-4 mt-5">
+            <div class="col-md-6 offset-3 bg-register-form p-4 mt-5">
                     <div class="alert alert-success alert-dismissible fade show"  id="btnAlert">
                         Formulir berhasil disimpan
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -98,10 +98,17 @@
     </div>
 </div>
 
+<div>
+    <button class="button1">Toggle Hide and Show Labels</button> 
+    <button class="button2">Show Labels</button> 
+</div>
+
 <script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="jquery/jquery.js"></script>
 
 <script type="text/javascript">
     
+
     var myAlert = document.getElementById('btnAlert');
     var btnLoading = document.getElementById('btnLoading');
     var btnCreate = document.getElementById('btnCreate');
@@ -139,5 +146,13 @@
         setTimeout(alertFunctionNone, 5000);
 
     }
+
+    $("button.button1").click(function(){
+        $(".container").animate({left: '250'});
+    });
+
+    $("button.button2").click(function(){
+        $(".container-fluid").show(500);
+    });
     
 </script>
