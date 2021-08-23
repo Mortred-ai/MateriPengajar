@@ -50,6 +50,12 @@
     </div>
 </nav> 
 
+
+<div>
+    <button class="button1">^</button> 
+    <button class="button2">V</button> 
+</div>
+
 <div class="container-fluid">
     <div class="container"> 
         <div class="row "> 
@@ -98,10 +104,6 @@
     </div>
 </div>
 
-<div>
-    <button class="button1">Toggle Hide and Show Labels</button> 
-    <button class="button2">Show Labels</button> 
-</div>
 
 <script src="bootstrap/js/bootstrap.min.js"></script> 
 <script src="jquery/jquery.js"></script>
@@ -148,11 +150,13 @@
     }
 
     $("button.button1").click(function(){
-        $(".container").animate({left: '250'});
+        $(".container-fluid").animate({
+            height : 'toggle'
+        });
     });
 
     $("button.button2").click(function(){
-        $(".container-fluid").show(500);
+        $(".container-fluid").slideDown(700);
     });
     
 </script>
