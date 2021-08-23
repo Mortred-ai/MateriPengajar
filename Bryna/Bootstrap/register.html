@@ -58,7 +58,7 @@
 
 <div class="container-fluid">
     <div class="container"> 
-        <div class="row "> 
+        <div class="row my-5"> 
             <div class="col-md-6 offset-3 bg-register-form p-4 mt-5">
                     <div class="alert alert-success alert-dismissible fade show"  id="btnAlert">
                         Formulir berhasil disimpan
@@ -101,6 +101,20 @@
                     
             </div>
         </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="bg-dark text-white d-flex justify-content-center py-3" id="dropToggle">
+        <span>Frequent Ask Question</span>
+    </div>
+    <div class="faq-quest bg-dark text-white p-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptate qui odit officia ducimus molestiae error 
+            illo veritatis, explicabo a minima nostrum reiciendis est maiores in enim commodi? Similique vel velit fugit deleniti 
+            labore voluptatem quod aspernatur. Asperiores ea doloremque, at ullam quia dolores voluptatibus necessitatibus in eius hic, 
+            possimus esse deserunt dolorem eum vero veniam, alias ad culpa dicta dolor rem perferendis. Ab ullam vitae nam, aperiam totam 
+            exercitationem porro, provident perspiciatis, ipsa aspernatur amet consequuntur ex soluta pariatur 
+            eligendi veniam beatae excepturi harum eos laboriosam aliquid. Ex, commodi rem illo mollitia dolor minima ipsa eos illum possimus quas.</p>
     </div>
 </div>
 
@@ -148,6 +162,7 @@
         setTimeout(alertFunctionNone, 5000);
 
     }
+    
 
     $("button.button1").click(function(){
         $(".container-fluid").animate({
@@ -158,5 +173,9 @@
     $("button.button2").click(function(){
         $(".container-fluid").slideDown(700);
     });
+
+    $("#dropToggle").click(function(){
+        $(".faq-quest").toggle(600);
+    })
     
 </script>
